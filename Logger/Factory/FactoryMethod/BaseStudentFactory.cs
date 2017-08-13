@@ -16,10 +16,10 @@ namespace Logger.Factory.FactoryMethod
         }
         public Student GetFees()
         {
-            IStudent _iStudent = this.Create();
+            IStudent _iStudent = this.CreateStudent();
             _student.SemesterFee = _iStudent.SemesterFees();
             return _student;
         }
-        public abstract IStudent Create();
+        public abstract IStudent CreateStudent();
     }
 }

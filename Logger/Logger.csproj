@@ -50,7 +50,7 @@
     <Compile Include="Interfaces\IStudent.cs" />
     <Compile Include="Students\PrivateStudent.cs" />
     <Compile Include="Students\RegularStudent.cs" />
-    <Compile Include="Factory\StudentFactory.cs" />
+    <Compile Include="Factory\StudentSimpleFactory.cs" />
     <Compile Include="Interfaces\ILogger.cs" />
     <Compile Include="Singelton\Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

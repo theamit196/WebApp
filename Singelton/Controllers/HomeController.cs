@@ -26,7 +26,8 @@ namespace Singelton.Controllers
         }
         private int GetAverageValue(int TotalValue, int NoOfItem)
         {
-            return TotalValue / NoOfItem;
+            //Created runtime exception to log error in file using singeltion
+            return 0;// TotalValue / NoOfItem;
         }
         /// <summary>
         /// This is Simple Factory
@@ -39,9 +40,10 @@ namespace Singelton.Controllers
         /// <returns></returns>
         public ActionResult CreateStudent(Student student)
         {
-            StudentSimpleFactory studentSimpleFactory = new StudentSimpleFactory();
-            IStudent iStudent = studentSimpleFactory.GetStudent(student.StudentType);
-            student.SemesterFee = iStudent.SemesterFees();
+            //using simple factory method
+           // StudentSimpleFactory studentSimpleFactory = new StudentSimpleFactory();
+            //IStudent iStudent = studentSimpleFactory.GetStudent(student.StudentType);
+            //student.SemesterFee = iStudent.SemesterFees();
             //But there is problem in this code we have not exposed the HostelFee and examinationFee through the IStudent
             //hence if we need to calculate hostel fees and examination fees at the point where simple factory is creating the IStudent
             //then we need to modify the simple factory which is voilating the creational principle
@@ -52,7 +54,8 @@ namespace Singelton.Controllers
             //Using Factory Method
             BaseStudentFactory studentFactory = new StudentFactory().CreateFactory(student);
             studentFactory.GetFees();
-            return View();
+            
+            return View(student);
         }
     }
 }

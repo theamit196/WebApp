@@ -14,7 +14,7 @@ namespace Logger.Factory.FactoryMethod
         {
 
         }
-        public override IStudent Create()
+        public override IStudent CreateStudent()
         {
             RegularStudent regularStudent = new RegularStudent();
             _student.HostelFee = regularStudent.HostelFees();
