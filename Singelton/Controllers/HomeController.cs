@@ -27,7 +27,8 @@ namespace Singelton.Controllers
         private int GetAverageValue(int TotalValue, int NoOfItem)
         {
             //Created runtime exception to log error in file using singeltion
-            return 0;// TotalValue / NoOfItem;
+
+            return  TotalValue / NoOfItem;
         }
         /// <summary>
         /// This is Simple Factory
